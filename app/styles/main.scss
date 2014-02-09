@@ -25,7 +25,28 @@ body {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
+    .shadow {
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+    }
+
+    .btn.active {
+        background-color: rgba(57, 55, 63, 0.95);
+        color: white;
+        border-color: rgba(57, 55, 63, 0.95);
+    }
+
+    .btn.dropdown-toggle {
+        background-color: rgba(57, 55, 63, 0.95);
+        padding-left: 4px;
+        padding-right: 4px;
+        .caret {
+            border-top-color: white;
+        }
+    }
+
+    .btn-group {
+        border-radius: 4px;
+    }
 
     /* Make the masthead heading the same height as the navigation */
     h3 {
@@ -67,9 +88,6 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
 
     /* Remove the padding we set earlier */
     .header,
@@ -77,11 +95,6 @@ body {
     .footer {
         padding-left: 0;
         padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
     }
     
     /* Remove the bottom border on the jumbotron for visual effect */
