@@ -1,6 +1,13 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
+$FontAwesomePath: "/bower_components/font-awesome/fonts/";
+$baseFontFamily: "FontAwesome";
 @import 'sass-bootstrap/lib/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+
+//Variables:
+$darkblue: rgba(57, 55, 63, 0.95);
+$darkblue-light: rgba(76, 75, 81, 0.95);
+
 
 .browsehappy {
     margin: 0.2em 0;
@@ -11,49 +18,82 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
     padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
+.collections,
 .footer {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-    .shadow {
-        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+.navbar-header {
+
+    img {
+        max-width: 30% !important;
+        height: auto;
     }
 
-    .btn.active {
-        background-color: rgba(57, 55, 63, 0.95);
-        color: white;
-        border-color: rgba(57, 55, 63, 0.95);
+    .navbar-brand {
+        padding: 10px 15px 0 15px;
     }
 
-    .btn.dropdown-toggle {
-        background-color: rgba(57, 55, 63, 0.95);
-        padding-left: 4px;
-        padding-right: 4px;
-        .caret {
-            border-top-color: white;
+}
+
+.nav.header-text {
+    margin: 14px 0 0 -300px;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #777777;
+}
+
+.left-margins li {
+    border-left: 1px solid #E7E7E7;
+}
+
+body > .navbar {
+    margin-bottom: 0;
+}
+
+.darkblue-bg {
+    background-color: $darkblue;
+    padding: 10px 25px;
+}
+
+.collections {
+    background-color: $darkblue-light;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 0 20px;
+        border-right: 1px solid rgba(53, 52, 56, 0.95);
+        height: 100px;
+        &.last {
+            border-right: none;
+        }
+        li {
+            font-size: 0.85em;
+            margin-bottom: 8px;
+            letter-spacing: 0.125em;
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
-
-    .btn-group {
-        border-radius: 4px;
-    }
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
+    h4 {
+        text-align: center;
+        margin-bottom: 30px;
+        letter-spacing: 0.5em;
     }
 }
 
@@ -92,6 +132,7 @@ body {
     /* Remove the padding we set earlier */
     .header,
     .marketing,
+    .collections,
     .footer {
         padding-left: 0;
         padding-right: 0;
