@@ -306,9 +306,14 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
-                        'bower_components/' + (this.includeCompass ? 'sass-' : '') + 'bootstrap/' + (this.includeCompass ? 'fonts/' : 'dist/fonts/') +'*.*',
-			'fonts/'
+                        'bower_components/' + (this.includeCompass ? 'sass-' : '') + 'bootstrap/' + (this.includeCompass ? 'fonts/' : 'dist/fonts/') +'*.*'
                     ]
+                }, {
+                    expand: true,
+                    dot: true,
+                    cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts/',
+                    src: ['**'],
+                    dest: '<%= yeoman.dist %>/fonts/'
                 }]
             },
             styles: {

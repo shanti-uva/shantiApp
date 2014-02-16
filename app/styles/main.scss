@@ -1,5 +1,5 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-$FontAwesomePath: "/bower_components/font-awesome/fonts/";
+$fa-font-path: "../bower_components/font-awesome/fonts/" !default;
 $baseFontFamily: "FontAwesome";
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'font-awesome/scss/font-awesome';
@@ -41,10 +41,16 @@ body {
 
 }
 
+.navbar-nav.left-margins {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+}
+
 .nav.header-text {
     margin: 14px 0 0 -300px;
     font-size: 1.1em;
     font-style: italic;
+    font-family: 'Droid Serif', serif;
     color: #777777;
 }
 
@@ -67,6 +73,8 @@ body > .navbar {
     color: white;
     text-transform: uppercase;
     padding: 10px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
     .closecollection a {
         color: white;
         font-size: 2em;
@@ -117,8 +125,10 @@ body > .navbar {
     position: relative;
     .page-title {
         font-size: x-large;
+        font-family: 'Droid Sans', sans-serif;
+        font-weight: 400;
         .fa {
-            padding: 2px 10px;
+            padding: 2px 4px;
             background-color: rgba(57, 55, 63, 0.20);
             margin-left: -15px;
         }
@@ -126,6 +136,10 @@ body > .navbar {
     .breadcrumb {
         background-color: inherit;
         font-size: smaller;
+        font-family: 'Droid Serif', serif;
+        .tag-before-breadcrumb {
+            font-family: 'Droid Sans', sans-serif;
+        }
         a {
             color: white;
             text-decoration: none;
